@@ -1,0 +1,8 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74vh;
+    border: 20px solid #f1f3f5;
+    width: 100%;
+}

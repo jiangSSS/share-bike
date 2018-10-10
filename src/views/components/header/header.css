@@ -1,0 +1,48 @@
+.header-warp{
+    width: 100%    
+}
+.user-info{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #f9c700;
+}
+.username{
+    color: #f9c700;
+    font-size: 14px; 
+    padding: 0 15px;   
+}
+.logout{
+    padding-right: 50px;
+    color: skyblue
+}
+.breadcrumd{
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+    width: 12.5%;
+}
+.breadcrumd::after{
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom: -27px;
+    transform: translateX(-50%);
+    border: 12px solid transparent;
+    border-top: 12px solid #fff;
+    width: 0;
+    height: 0;
+}
+.weather-warp{
+    width: 1280px;
+    height: 40px;
+    line-height: 40px;
+}
+.date{
+    padding-right: 30px;
+}
+.weather-detail{
+    padding-right: 50px;
+    color: #666;
+    font-weight: 600;
+}

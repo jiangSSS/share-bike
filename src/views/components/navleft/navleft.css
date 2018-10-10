@@ -1,0 +1,12 @@
+.fll{
+    float: left;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+.nav-left{
+    background: #001529;
+    height: 100vh;
+}

@@ -1,0 +1,22 @@
+.title{
+    font-size: 60px;
+    color: #484848;
+    font-weight: 700;
+}
+.li{
+    text-decoration: none;
+}
+.zz{
+    width: 1280px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-top: 30px;
+    height: 74vh;
+    border: 20px solid #f1f3f5
+}
+.img{
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+   
+}
