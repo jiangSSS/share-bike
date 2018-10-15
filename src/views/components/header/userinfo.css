@@ -1,0 +1,21 @@
+.header{
+    background: #409eff;
+    width: 100%;
+}
+.detail-info{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+.title-warp{
+    color: #fff;
+    margin-left: 80px;
+    margin-top: 8px;
+    
+}
+.logout{
+    color: #e75225
+}
+.user-detail{
+    color: #333
+}

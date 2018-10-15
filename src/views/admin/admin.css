@@ -1,5 +1,13 @@
 .content-warp{
-    padding: 5px;
-    background: #fff;
-    margin-left: 30px;
+    padding: 20px;
+    background: #f1f3f5;
+    
 }
+.content{
+    background: #fff;
+    /* height: 70vh; */
+}
+.nav-left-wrap {
+    background: #001529;
+    height: calc(100vh);
+  }

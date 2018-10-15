@@ -1,5 +1,6 @@
 .header-warp{
-    width: 100%    
+    width: 1320px;
+    overflow: hidden;    
 }
 .user-info{
     width: 100%;
@@ -14,28 +15,30 @@
 }
 .logout{
     padding-right: 50px;
-    color: skyblue
+    color: #409eff
 }
 .breadcrumd{
     position: relative;
     font-size: 18px;
     text-align: center;
-    width: 12.5%;
+    width: 22.5%;
 }
 .breadcrumd::after{
     content:"";
+    display: block;
     position: absolute;
     left: 50%;
-    bottom: -27px;
+    bottom: -24px;
     transform: translateX(-50%);
     border: 12px solid transparent;
-    border-top: 12px solid #fff;
+    border-top: 12px solid #fff ;
     width: 0;
     height: 0;
 }
 .weather-warp{
-    width: 1280px;
+    width: 100%;
     height: 40px;
+    overflow: hidden;
     line-height: 40px;
 }
 .date{
