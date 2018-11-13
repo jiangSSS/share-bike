@@ -54,40 +54,42 @@ class FilterForm extends Component {
 
         const { getFieldDecorator } = this.props.form;
         return (
-            <Form layout='inline'>
-                <FormItem label='城市'>
-                    {getFieldDecorator('city')(
-                        <Select placeholder='请选择一个城市' style={{ width: 180 }}>
-                            {this.cityData.map(item =>
-                                <Option value={item.id} key={item.id}>{item.label}</Option>
-                            )}
-                        </Select>
-                    )}
-
-                </FormItem>
-                <FormItem label='订单时间'>
-                    {getFieldDecorator('orderTime')(
-                        <RangePicker></RangePicker>
-                    )}
-                </FormItem>
-                <FormItem label='订单状态'>
-                    {
-                        getFieldDecorator('status')(
-                            <Select placeholder='请选择一个状态' style={{ width: 180 }}>
-                                {this.orderData.map(item =>
+            <Card>
+                <Form layout='inline'>
+                    <FormItem label='城市'>
+                        {getFieldDecorator('city')(
+                            <Select placeholder='请选择一个城市' style={{ width: 180 }}>
+                                {this.cityData.map(item =>
                                     <Option value={item.id} key={item.id}>{item.label}</Option>
                                 )}
                             </Select>
-                        )
-                    }
-                </FormItem>
-                <div className="find">
-                    <Button type='primary' className="find1">
-                        查询
+                        )}
+                    </FormItem>
+                    <FormItem label='订单时间'>
+                        {getFieldDecorator('orderTime')(
+                            <RangePicker></RangePicker>
+                        )}
+                    </FormItem>
+                    <FormItem label='订单状态'>
+                        {
+                            getFieldDecorator('status')(
+                                <Select placeholder='请选择一个状态' style={{ width: 180 }}>
+                                    {this.orderData.map(item =>
+                                        <Option value={item.id} key={item.id}>{item.label}</Option>
+                                    )}
+                                </Select>
+                            )
+                        }
+                    </FormItem>
+                    <div className="find">
+                        <Button type='primary' className="find1">
+                            查询
                    </Button>
-                    <Button>重置</Button>
-                </div>
-            </Form>
+                        <Button>重置</Button>
+                    </div>
+                </Form>
+            </Card>
+
         )
     }
 }
@@ -102,8 +104,8 @@ export default class Order extends Component {
         pageSize: "",
         total: "",
         isLoading: false,
-        endItem:{},
-        selectedIndex:[]
+        endItem: {},
+        selectedIndex: []
     }
     params = {
         pn: 1
@@ -134,11 +136,11 @@ export default class Order extends Component {
     handleDone = () => {
         let selectedItem = this.state.selectedItem
         if (selectedItem) {
-            axios.get("/order/ebike_info",{id:selectedItem[0].id}).then(res=>{
+            axios.get("/order/ebike_info", { id: selectedItem[0].id }).then(res => {
                 console.log(res)
                 this.setState({
-                    endItem:res.result,
-                    isShowModal:true
+                    endItem: res.result,
+                    isShowModal: true
                 })
             })
         } else {
@@ -149,20 +151,20 @@ export default class Order extends Component {
     handleEnd = () => {
         let id = this.state.selectedItem[0].id
         this.setState({
-            isShowModal:false
+            isShowModal: false
         })
-        axios.get("/order/finish_order",{id}).then(res=>{
-            if(res.code == 0 ){
-               message.success("结束订单成功")
-               this.getTable()
+        axios.get("/order/finish_order", { id }).then(res => {
+            if (res.code == 0) {
+                message.success("结束订单成功")
+                this.getTable()
             }
         })
     }
-    handledetail = ()=>{
+    handledetail = () => {
         let item = this.state.selectedItem
-        if(item){
-            window.open(`/#/admin/orderdetail/${item[0].id}`,"_blank")
-        }else{
+        if (item) {
+            window.open(`/#/admin/orderdetail/${item[0].id}`, "_blank")
+        } else {
             message.info("请选择一个订单进行操作")
         }
     }

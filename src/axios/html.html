@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .aa {
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #f00;
+            left: 50%;
+            top: 50%;
+            /* transform: translate(-50%) */
+            margin-top: -100px;
+            margin-left: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="aa"></div>
+    </div>
+</body>
+<script>
+    // var arr = [1, 1, 6, 6, 3, 4, 5, 5]
+    // // 利用数组的filter方法
+    // // var newArr = arr.filter(function(element,index,self){
+    // //     return self.indexOf(element) === index
+    // // })
+
+    // function oSort(err){
+    //     for(var i=0;i<arr.length;i++){
+    //         for(var j=0;j<arr.length;j++){
+    //             if(arr[i] == arr[j] && i != j){
+    //                 arr.splice(j,1)
+    //             }
+    //         }
+    //     }
+    //     return arr
+    // }
+    // var newArr = oSort(arr)
+    // var arrSort = newArr.sort()
+    // var arr2 = arrSort.reverse()
+    // console.log(arr)
+    // console.log(newArr)
+    // console.log(arrSort)
+    // console.log(arr2)
+    var arr = [4,5,2,2,4,1,3,6,6,3]
+    var arr2 = arr.sort()
+    var arr1 = arr.reverse()
+    console.log(arr1)
+
+    function fixedZero(num){
+        return num >= 10 ? ("" + num) : ("0" + num) 
+    }
+    let d = new Date()
+    let year = fixedZero(d.getFullYear())
+    let month = fixedZero(d.getMonth() + 1)
+    let day = fixedZero(d.getDate())
+    let h = fixedZero(d.getHours())
+    let m = fixedZero(d.getMinutes())
+    let s = fixedZero(d.getSeconds())
+    let newDate = `${year}-${month}-${day} ${h}:${m}:${s}`
+    setInterval(()=>{
+
+    },1000)
+    console.log(newDate)
+    var a = 10
+    console.log(a++)
+    console.log(++a)    
+
+    
+</script>
+
+</html>
